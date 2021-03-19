@@ -6,15 +6,15 @@ module.exports= {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname,'dist'), //donde lo va poner
-    filename: 'main.js'
+    filename: './main.js'
   },
   resolve:{
-    extensions: ['js'],
+    extensions: ['.js'],
   },
   module:{
     rules:[
       {
-        test: /\.js$/, 
+        test: /\.js?$/, 
         exclude: /node_modules/,
         use:{
           loader: 'babel-loader',
@@ -22,12 +22,13 @@ module.exports= {
       }
     ]
   },
+
   plugins:[
-    new HtmlWebpackPlugin([{
+    new HtmlWebpackPlugin({
       inject: true,
       template: './public/index.html',
       filename: './index.html',
-    }]),
+    }),
   ],
   devServer:{
     port: 3001,
