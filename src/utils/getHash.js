@@ -1,4 +1,4 @@
-const getHash = ()=> location.hash.match(/[^(#\)]?/g).join("").toLowerCase() || "/"
+const getHash = ()=> location.hash.match(/[^(#\/)]?/g).join("").toLowerCase() || "/"
 
 
 export default getHash
@@ -37,5 +37,5 @@ console.log(split)
 
 //Expresion Regular Utilizada
 let str = "/"
-let c = str.match(/[^(#\/)]+?/g)||"nusus"
-console.log(str.match(/[^(#\/)]?/g).join(""))
+let c = str.match(/[^(#\/)]?/g)||"nusus"
+console.log(str.match(/[^(#\/)]?/g).join("")) //el string vacio lo que indica es: Como no hay ninguna letra entonces "" es decir no me trae el "" por el /
