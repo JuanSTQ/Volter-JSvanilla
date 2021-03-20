@@ -3,7 +3,7 @@ const Header = ()=>{
     <div class="Header-main">
         <div class="Header-logo">
           <h1>
-            <a href="/">Volter</a>
+            <a href="Volter-JSvanilla/">Volter</a>
           </h1>
         </div>
         <div class="Header-nav">
