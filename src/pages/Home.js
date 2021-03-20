@@ -1,7 +1,8 @@
 import getData from '../utils/getData'
 
 const Home = async ()=>{
-  const characters = await getData()
+  const page = Math.floor(Math.random()*34+1)
+  const characters = await getData(false,page)
     //characters.results es un array de todos los characters de la api
   const view = `
     <div class="Characters">
@@ -22,3 +23,4 @@ const Home = async ()=>{
 }
 
 export default Home
+
